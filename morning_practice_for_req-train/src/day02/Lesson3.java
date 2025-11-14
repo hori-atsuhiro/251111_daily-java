@@ -23,26 +23,31 @@ public class Lesson3 {
 
 	public static void main(String[] args) throws IOException {
 
+		int sum = 0;// 合計金額
+		int average = 0;// 平均金額
+		int inputCount = 0;//入力した回数
+		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); 
 		
 		System.out.println("金額①を入力してください"); 
 		String str1 = reader.readLine();
-
+		int num1 = Integer.parseInt(str1); 
+		inputCount++;
+		
 		System.out.println("金額②を入力してください"); 
 		String str2 = reader.readLine();
+		int num2 = Integer.parseInt(str2); 
+		inputCount++;
 		
 		System.out.println("金額③を入力してください"); 
 		String str3 = reader.readLine();
-		
-		int num1 = Integer.parseInt(str1); 
-		int num2 = Integer.parseInt(str2); 
 		int num3 = Integer.parseInt(str3); 
+		inputCount++;
 		
-		int sum = num1+num2+num3;// 合計金額
-		int inputCount = 3;//入力した回数
-		int average = (num1+num2+num3)/inputCount;// 平均金額
+		sum = (int)((num1+num2+num3)*1.08);//合計金額
+		average = sum/inputCount;// 平均金額
 		
-		System.out.println("①から③の合計は税込み"+(int)(sum*1.08)+"円"); 
-		System.out.println("①から③の平均は税込み"+(int)(average*1.08)+"円"); 
+		System.out.println("①から③の合計は税込み"+sum+"円"); 
+		System.out.println("①から③の平均は税込み"+average+"円"); 
 			}
 }
