@@ -42,8 +42,14 @@ package day07.q01;
 class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		Drink[] drink = new Drink[3];
+		drink[0] = new Drink(140, "リアル・コーラ");
+		drink[1] = new Drink(210, "ハイパードライ");
+		drink[2] = new Drink();
 
+		for(Drink drinks:drink) {
+			drinks.show();
+		}
 	}
 
 }

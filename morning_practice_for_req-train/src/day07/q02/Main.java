@@ -68,8 +68,22 @@ package day07.q02;
 public class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		Member[] member = new Member[3];
+		member[0] = new Member(1, "人見");
+		member[1] = new Member(2, "植木");
+		member[2] = new Member(3, "吉崎");
+		// 配列要素の表示
+		MemberManager.show(member);
 
+		// 変更対象のID
+		int id = 1;
+		// 変更後の名前
+		String newName = "三浦";
+		// 変更メソッドの呼び出し
+		MemberManager.update(member, id, newName);
+
+		// 配列要素の再表示
+		MemberManager.show(member);
 	}
 
 }
