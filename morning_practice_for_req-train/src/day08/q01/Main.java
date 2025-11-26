@@ -51,12 +51,14 @@ class Main {
 
 		/*Magicクラスの生成、利用*/
 		Magic magic = new Magic("魔法使い");
+		Sorcerer sorcerer = new Sorcerer("魔導士");
 
 		int magicMp = 10;
+		int sorcererMp = 10;
 
 		magic.attack(magicMp);
+		sorcerer.attack(sorcererMp);
 
-		/*ここから記入*/
 
 	}
 
